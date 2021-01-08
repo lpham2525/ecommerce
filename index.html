@@ -17,7 +17,7 @@
           <img src="images/whimsical.jpg" width='125px'>
         </div>
         <nav>
-          <ul>
+          <ul id="menuItems">
             <li><a href=' '>Home</a></li>
             <li><a href=' '>Products</a></li>
             <li><a href=' '>About</a></li>
@@ -26,6 +26,7 @@
           </ul>
         </nav>
         <img src='images/basket.jpg' alt='cart image' width='30px' height='30px'>
+        <img src="images/menu.png" alt="menu-icon" onclick="menuToggle()">
       </div>
       <div class="row">
         <div class="col-2">
@@ -255,6 +256,10 @@
         <div class="footer-col-1">
           <h3>Download Our App</h3>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ea illo minima praesentium impedit, eligendi ipsam tempore, repellendus vero provident laborum quis cum, numquam blanditiis reprehenderit deserunt esse? Necessitatibus, hic.</p>
+          <div class="app-logo">
+            <img src="images/play-store.png" alt="play-store">
+            <img src="images/app-store" alt="app-store">
+          </div>
         </div>
         <div class="footer-col-2">
           <img src="images/logo-white" alt="white logo">
@@ -279,7 +284,23 @@
           </ul>
         </div>
       </div>
+      <hr>
+      <p class="copyright">Copyright 2020 - Easy Tutorials</p>
     </div>
   </div>
+  <!--JavaScritp for toggle menu-->
+  <script>
+    const menuItems = document.getElementById("menuItems")
+
+    menuItems.style.maxHeight='0px'
+
+    const menuToggle = () => {
+      if (menuItems.style.maxHeight == '0px') {
+        menuItems.style.maxHeight = '200px'
+      } else {
+        menuItems.style.maxHeight - '0px'
+      }
+    }
+  </script>
 </body>
 </html>
